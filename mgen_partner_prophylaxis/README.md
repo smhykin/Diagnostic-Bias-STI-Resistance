@@ -1,28 +1,45 @@
 # Treat the Partner, Save the Population
 
-**Modeling the Impact of Prophylactic Partner Treatment on M. genitalium Transmission and Antibiotic Resistance**
+**Modeling the Impact of Prophylactic Partner Treatment on _Mycoplasma genitalium_ Transmission and Antibiotic Resistance**
 
-This project simulates how different partner treatment strategies affect the spread and resistance dynamics of *Mycoplasma genitalium* (MG), a rising STI known for rapid antibiotic resistance. We compare:
+_Mycoplasma genitalium_ (MG) is a rapidly mutating sexually transmitted infection with growing antibiotic resistance and poor routine screening coverage, especially in asymptomatic men.
 
-1. Standard care (index case only)
-2. Reactive partner treatment
-3. Prophylactic partner treatment (before sex with a new partner)
+Current protocols focus on treating only symptomatic index cases and testing partners after exposure. But with MG's diagnostic delay and resistance profile, **waiting to treat is already too late**.
 
-## Key Findings (TBD)
-- Prophylactic treatment significantly reduces transmission, reinfection, and resistant strain emergence.
-- Resistance rates above 30% dramatically increase the value of pre-contact treatment.
+This project simulates a different approach: **pre-treating sexual partners before exposure**, acknowledging that many so-called "healthy" partners may already be infected — just not yet detected.
 
-## Skills Demonstrated
-- Compartmental modeling (SIR variant)
-- Simulation of biological and behavioral factors
-- Scenario testing with policy relevance
-- Visualization and interpretability
+## Why This Model Matters
+
+We’re not just modeling STI transmission — we’re modeling the **cost of waiting to know**.
+
+## Scenarios Compared
+
+1. **Standard Care**: Only symptomatic index cases are treated.
+2. **Reactive Partner Treatment**: Partners are treated after exposure and confirmed infection.
+3. **Prophylactic Treatment**: Partners are treated *before* sexual contact.
+
+## Features
+
+- Dynamic simulation of susceptible, infected, and treated populations
+- Poisson-distributed partner exposures based on real-world MG prevalence
+- Adjustable resistance rates and population risk scenarios (general vs. high-risk)
+- Visualization of infection curves under different strategies
+
+## Core Assumptions
+
+- People continue forming new partnerships whether they’re infected or treated.
+- Prevalence determines likelihood of exposure to an undiagnosed infection.
+- Resistance emerges both via transmission and failed treatment.
 
 ## Files
-- `transmission_model.ipynb` – simulation code and results
-- `/figures/` – charts for each scenario
-- `/report/` – brief written summary of findings
+
+- `transmission_model.ipynb` – code for simulation and visualization
+- `/figures/` – key plots for report or presentation
+- `/report/` – write-up of key findings and implications
+- `/data/` – reference data or synthetic inputs
 
 ## References
-- CDC MG treatment guidelines (2022)
-- Recent surveillance data on MG resistance
+
+- CDC STD Treatment Guidelines (2021–2023)
+- MyGeniUS surveillance data (2020)
+- NHANES STI Prevalence Survey (2017–2018)
